@@ -1,0 +1,94 @@
+setwd("C:/Users/Domas/Desktop/Code/BigData/Data")
+getwd()
+
+df1 = read.csv("2.1. data-table_2006_2016_vidurkis.csv", header = FALSE, encoding = "UTF-8")
+gyvSk_LR = df1[c(6:24), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_LR) <- NULL
+colnames(gyvSk_LR) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Alytus = df1[c(27:45), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Alytus) <- NULL
+colnames(gyvSk_Alytus) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Kaunas = df1[c(47:65), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Kaunas) <- NULL
+colnames(gyvSk_Kaunas) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Klaipeda = df1[c(67:85), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Klaipeda) <- NULL
+colnames(gyvSk_Klaipeda) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Marijampole = df1[c(87:105), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Marijampole) <- NULL
+colnames(gyvSk_Marijampole) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Panevezys = df1[c(107:125), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Panevezys) <- NULL
+colnames(gyvSk_Panevezys) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Siauliai = df1[c(127:145), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Siauliai) <- NULL
+colnames(gyvSk_Siauliai) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+gyvSk_Siauliai
+
+gyvSk_Taurage = df1[c(147:165), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Taurage) <- NULL
+colnames(gyvSk_Taurage) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Telsiai = df1[c(167:185), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Telsiai) <- NULL
+colnames(gyvSk_Telsiai) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Utena = df1[c(187:205), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Utena) <- NULL
+colnames(gyvSk_Utena) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+gyvSk_Vilnius = df1[c(207:225), c(4, 5, 9, 12, 15, 18, 21, 26, 29, 32, 35, 38)]
+rownames(gyvSk_Vilnius) <- NULL
+colnames(gyvSk_Vilnius) <- c("Amzius", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+gyvSk_Vilnius
+
+df2 = read.csv("3.1. data-table_plotas.csv", header = FALSE, encoding = "UTF-8")
+plotas = df2[c(6:16), c(2:10, 12:14)]
+rownames(plotas) <- NULL
+colnames(plotas) <- c("Teritorja", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+df3 = read.csv("4.2_mokesciai.csv", header = FALSE, encoding = "UTF-8")
+mokesciai = df3[c(3:13), c(2:42)]
+rownames(mokesciai) <- NULL
+colnames(mokesciai) <- c("Teritorja", "2007K1", "2007K2", "2007K3", "2007K4", "2008K1", "2008K2", "2008K3", "2008K4", "2009K1", "2009K2", "2009K3", "2009K4", "2010K1", "2010K2", "2010K3", "2010K4", "2011K1", "2011K2", "2011K3", "2011K4", "2012K1", "2012K2", "2012K3", "2012K4", "2013K1", "2013K2", "2013K3", "2013K4", "2014K1", "2014K2", "2014K3", "2014K4", "2015K1", "2015K2", "2015K3", "2015K4", "2016K1", "2016K2", "2016K3", "2016K4", as.character())
+
+df3 = read.csv("4.2_mokesciai.csv", header = FALSE, encoding = "UTF-8")
+gyvpajamos = df3[c(14:24), c(2:42)]
+rownames(gyvpajamos) <- NULL
+colnames(gyvpajamos) <- c("Teritorja", "2007K1", "2007K2", "2007K3", "2007K4", "2008K1", "2008K2", "2008K3", "2008K4", "2009K1", "2009K2", "2009K3", "2009K4", "2010K1", "2010K2", "2010K3", "2010K4", "2011K1", "2011K2", "2011K3", "2011K4", "2012K1", "2012K2", "2012K3", "2012K4", "2013K1", "2013K2", "2013K3", "2013K4", "2014K1", "2014K2", "2014K3", "2014K4", "2015K1", "2015K2", "2015K3", "2015K4", "2016K1", "2016K2", "2016K3", "2016K4", as.character())
+
+df4 = read.csv("vidurkis.csv", header = FALSE, encoding = "UTF-8")
+vidurkis = df4[c(7:17), c(2:10, 12:14)]
+rownames(vidurkis) <- NULL
+colnames(vidurkis) <- c("Teritorja", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", as.character())
+
+
+library(RODBC)
+
+channel <- odbcConnect(dsn = "ProjektoDS", uid = "vvk_20", pwd = "vvk2020")
+odbcGetInfo(channel)
+
+sqlSave(channel, gyvSk_LR, rownames = FALSE)
+sqlSave(channel, gyvSk_Alytus, rownames = FALSE)
+sqlSave(channel, gyvSk_Kaunas, rownames = FALSE)
+sqlSave(channel, gyvSk_Klaipeda, rownames = FALSE)
+sqlSave(channel, gyvSk_Marijampole, rownames = FALSE)
+sqlSave(channel, gyvSk_Panevezys, rownames = FALSE)
+sqlSave(channel, gyvSk_Siauliai, rownames = FALSE)
+sqlSave(channel, gyvSk_Taurage, rownames = FALSE)
+sqlSave(channel, gyvSk_Telsiai, rownames = FALSE)
+sqlSave(channel, gyvSk_Utena, rownames = FALSE)
+sqlSave(channel, gyvSk_Vilnius, rownames = FALSE)
+sqlSave(channel, plotas, rownames = FALSE)
+sqlSave(channel, mokesciai, rownames = FALSE)
+sqlSave(channel, gyvpajamos, rownames = FALSE)
+sqlSave(channel, vidurkis, rownames = FALSE)
+
+odbcClose(channel)
+odbcCloseAll()
